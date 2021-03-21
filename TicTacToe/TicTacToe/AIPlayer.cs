@@ -4,17 +4,14 @@ using System.Text;
 
 namespace TicTacToe
 {
-  public class AIPlayer : IPlayer
+  public class AIPlayer : Player
   {
-    private Board mBoard;
-    public Board.CellState mAssignedCellState { set; get; }
     public AIPlayer(ref Board board)
     {
       mBoard = board;
-      mAssignedCellState = assignedCellState;
     }
 
-    public void PickBoardCell(int index)
+    public void PickRandomBoardCell()
     {
       int numberOfAvalableCells = 0;
       int[] availableCells = new int[Board.NUM_OF_CELLS];
@@ -29,9 +26,10 @@ namespace TicTacToe
         }
       }
       Random rand = new Random();
+
       // Pick a random one from
       // 0 <= x < numberOfAvalableCells
-      mBoard.SetCell(availableCells[rand.Next(0, numberOfAvalableCells)], mAssignedCellState);
+      PickBoardCell(availableCells[rand.Next(0, numberOfAvalableCells)]);
     }
   }
 }

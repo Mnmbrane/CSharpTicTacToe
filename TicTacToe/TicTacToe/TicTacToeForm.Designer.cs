@@ -39,9 +39,12 @@ namespace TicTacToe
       this.btnBotMid = new System.Windows.Forms.Button();
       this.btnBotRight = new System.Windows.Forms.Button();
       this.label2 = new System.Windows.Forms.Label();
-      this.label1 = new System.Windows.Forms.Label();
+      this.lblGamesWon = new System.Windows.Forms.Label();
       this.label3 = new System.Windows.Forms.Label();
       this.lblGamesLost = new System.Windows.Forms.Label();
+      this.label4 = new System.Windows.Forms.Label();
+      this.lblGameStatus = new System.Windows.Forms.Label();
+      this.btnNewGame = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // btnTopLeft
@@ -139,45 +142,75 @@ namespace TicTacToe
       this.label2.AutoSize = true;
       this.label2.Location = new System.Drawing.Point(12, 487);
       this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(74, 15);
+      this.label2.Size = new System.Drawing.Size(82, 15);
       this.label2.TabIndex = 11;
-      this.label2.Text = "Games Won:";
+      this.label2.Text = "Game(s) Won:";
       // 
-      // label1
+      // lblGamesWon
       // 
-      this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(93, 487);
-      this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(13, 15);
-      this.label1.TabIndex = 12;
-      this.label1.Text = "0";
+      this.lblGamesWon.AutoSize = true;
+      this.lblGamesWon.Location = new System.Drawing.Point(100, 487);
+      this.lblGamesWon.Name = "lblGamesWon";
+      this.lblGamesWon.Size = new System.Drawing.Size(13, 15);
+      this.lblGamesWon.TabIndex = 12;
+      this.lblGamesWon.Text = "0";
       // 
       // label3
       // 
       this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(112, 487);
+      this.label3.Location = new System.Drawing.Point(168, 487);
       this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(71, 15);
+      this.label3.Size = new System.Drawing.Size(79, 15);
       this.label3.TabIndex = 13;
-      this.label3.Text = "Games Lost:";
+      this.label3.Text = "Game(s) Lost:";
       // 
       // lblGamesLost
       // 
       this.lblGamesLost.AutoSize = true;
-      this.lblGamesLost.Location = new System.Drawing.Point(190, 487);
+      this.lblGamesLost.Location = new System.Drawing.Point(253, 487);
       this.lblGamesLost.Name = "lblGamesLost";
       this.lblGamesLost.Size = new System.Drawing.Size(13, 15);
       this.lblGamesLost.TabIndex = 14;
       this.lblGamesLost.Text = "0";
       // 
+      // label4
+      // 
+      this.label4.AutoSize = true;
+      this.label4.Location = new System.Drawing.Point(324, 487);
+      this.label4.Name = "label4";
+      this.label4.Size = new System.Drawing.Size(76, 15);
+      this.label4.TabIndex = 15;
+      this.label4.Text = "Game Status:";
+      // 
+      // lblGameStatus
+      // 
+      this.lblGameStatus.AutoSize = true;
+      this.lblGameStatus.Location = new System.Drawing.Point(407, 487);
+      this.lblGameStatus.Name = "lblGameStatus";
+      this.lblGameStatus.Size = new System.Drawing.Size(0, 15);
+      this.lblGameStatus.TabIndex = 16;
+      // 
+      // btnNewGame
+      // 
+      this.btnNewGame.Location = new System.Drawing.Point(12, 505);
+      this.btnNewGame.Name = "btnNewGame";
+      this.btnNewGame.Size = new System.Drawing.Size(75, 23);
+      this.btnNewGame.TabIndex = 17;
+      this.btnNewGame.Text = "New Game";
+      this.btnNewGame.UseVisualStyleBackColor = true;
+      this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+      // 
       // TicTacToeForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(484, 511);
+      this.ClientSize = new System.Drawing.Size(484, 536);
+      this.Controls.Add(this.btnNewGame);
+      this.Controls.Add(this.lblGameStatus);
+      this.Controls.Add(this.label4);
       this.Controls.Add(this.lblGamesLost);
       this.Controls.Add(this.label3);
-      this.Controls.Add(this.label1);
+      this.Controls.Add(this.lblGamesWon);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.btnBotRight);
       this.Controls.Add(this.btnBotMid);
@@ -208,9 +241,12 @@ namespace TicTacToe
     private System.Windows.Forms.Button btnBotMid;
     private System.Windows.Forms.Button btnBotRight;
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Label lblGamesWon;
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label lblGamesLost;
+    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.Label lblGameStatus;
+    private System.Windows.Forms.Button btnNewGame;
   }
 }
 
